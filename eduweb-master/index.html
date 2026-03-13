@@ -121,7 +121,8 @@
             </p>
 
 
-            <a href="https://wa.me/6285184221448?text=Assalamualaikum.%20Saya%20ingin%20bergabung%21" class="btn has-before" target="_blank" rel="noopener">
+            <a href="https://wa.me/6285184221448?text=Assalamualaikum.%20Saya%20ingin%20bergabung%21"
+              class="btn has-before" target="_blank" rel="noopener">
               <span class="span">Daftar Sekarang</span>
 
               <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -517,234 +518,259 @@
 
 
 
-      <section class="video has-bg-image" aria-label="video"
-        style="background-image: url('./assets/images/video-bg.png')">
-        <div class="container">
+      <section class="video has-bg-image">
 
-          <div class="video-card">
+        <div class="video-banner" id="video-container"
+          style="position:relative; width:100%; max-width:970px; height:550px; cursor:pointer;">
 
-            <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
-              <img src="./assets/images/video-banner.jpg" width="970" height="550" loading="lazy" alt="video banner"
-                class="img-cover">
+          <img src="https://img.youtube.com/vi/wGeXn9_jxWw/maxresdefault.jpg" class="img-cover" id="video-thumbnail"
+            style="width:100%; height:100%; object-fit:cover;">
 
-              <button class="play-btn" aria-label="play video">
-                <ion-icon name="play" aria-hidden="true"></ion-icon>
-              </button>
-            </div>
+          <button id="play-button" style="
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:40px;
+background:white;
+border:none;
+border-radius:50%;
+width:80px;
+height:80px;
+cursor:pointer;
+">
+            ▶
+          </button>
 
-            <img src="./assets/images/video-shape-1.png" width="1089" height="605" loading="lazy" alt=""
-              class="shape video-shape-1">
+        </div>
 
-            <img src="./assets/images/video-shape-2.png" width="158" height="174" loading="lazy" alt=""
-              class="shape video-shape-2">
+        <script>
+
+          const playButton = document.getElementById("play-button");
+          const container = document.getElementById("video-container");
+
+          const videoId = "wGeXn9_jxWw";
+
+          playButton.addEventListener("click", function () {
+
+            container.innerHTML = `
+<iframe 
+width="100%" 
+height="100%" 
+src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1"
+title="YouTube video"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen
+style="position:absolute;top:0;left:0;width:100%;height:100%;">
+</iframe>
+`;
+
+          });
+
+        </script>
+
+
+
+
+        <section class="section stats" aria-label="stats">
+          <div class="container">
+
+            <ul class="grid-list">
+
+              <li>
+                <div class="stats-card" style="--color: 170, 75%, 41%">
+                  <h3 class="card-title">29.3k</h3>
+
+                  <p class="card-text">Siswa Terdaftar</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="stats-card" style="--color: 351, 83%, 61%">
+                  <h3 class="card-title">32.4K</h3>
+
+                  <p class="card-text">Kelas Selesai</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="stats-card" style="--color: 260, 100%, 67%">
+                  <h3 class="card-title">100%</h3>
+
+                  <p class="card-text">Tingkat Kepuasan</p>
+                </div>
+              </li>
+
+              <li>
+                <div class="stats-card" style="--color: 42, 94%, 55%">
+                  <h3 class="card-title">354+</h3>
+
+                  <p class="card-text">Pengajar Terbaik</p>
+                </div>
+              </li>
+
+            </ul>
 
           </div>
-
-        </div>
-      </section>
+        </section>
 
 
 
 
 
-      <section class="section stats" aria-label="stats">
-        <div class="container">
+        <section class="section blog has-bg-image" id="blog" aria-label="blog"
+          style="background-image: url('./assets/images/blog-bg.svg')">
+          <div class="container">
 
-          <ul class="grid-list">
+            <p class="section-subtitle">Artikel Terbaru</p>
 
-            <li>
-              <div class="stats-card" style="--color: 170, 75%, 41%">
-                <h3 class="card-title">29.3k</h3>
+            <h2 class="h2 section-title">Dapatkan Info Terbaru dari Tasmu</h2>
 
-                <p class="card-text">Siswa Terdaftar</p>
-              </div>
-            </li>
+            <ul class="grid-list">
 
-            <li>
-              <div class="stats-card" style="--color: 351, 83%, 61%">
-                <h3 class="card-title">32.4K</h3>
+              <li>
+                <div class="blog-card">
 
-                <p class="card-text">Kelas Selesai</p>
-              </div>
-            </li>
+                  <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                    <img src="./assets/images/blog-1.jpg" width="370" height="370" loading="lazy"
+                      alt="Tips Cepat Hafal Kosa Kata Bahasa Arab" class="img-cover">
+                  </figure>
 
-            <li>
-              <div class="stats-card" style="--color: 260, 100%, 67%">
-                <h3 class="card-title">100%</h3>
+                  <div class="card-content">
 
-                <p class="card-text">Tingkat Kepuasan</p>
-              </div>
-            </li>
+                    <a href="#" class="card-btn" aria-label="read more">
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
 
-            <li>
-              <div class="stats-card" style="--color: 42, 94%, 55%">
-                <h3 class="card-title">354+</h3>
+                    <a href="#" class="card-subtitle">Tips Belajar</a>
 
-                <p class="card-text">Pengajar Terbaik</p>
-              </div>
-            </li>
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Tips Cepat Hafal Kosa Kata Bahasa Arab</a>
+                    </h3>
 
-          </ul>
+                    <ul class="card-meta-list">
 
-        </div>
-      </section>
+                      <li class="card-meta-item">
+                        <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
 
+                        <span class="span">Oct 10, 2025</span>
+                      </li>
 
+                      <li class="card-meta-item">
+                        <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
 
+                        <span class="span">Komen 09</span>
+                      </li>
 
+                    </ul>
 
-      <section class="section blog has-bg-image" id="blog" aria-label="blog"
-        style="background-image: url('./assets/images/blog-bg.svg')">
-        <div class="container">
+                    <p class="card-text">
+                      Metode praktis untuk menambah perbendaharaan kata Anda setiap hari.
+                    </p>
 
-          <p class="section-subtitle">Artikel Terbaru</p>
-
-          <h2 class="h2 section-title">Dapatkan Info Terbaru dari Tasmu</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                  <img src="./assets/images/blog-1.jpg" width="370" height="370" loading="lazy"
-                    alt="Tips Cepat Hafal Kosa Kata Bahasa Arab" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="#" class="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                  <a href="#" class="card-subtitle">Tips Belajar</a>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Tips Cepat Hafal Kosa Kata Bahasa Arab</a>
-                  </h3>
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">Oct 10, 2025</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">Komen 09</span>
-                    </li>
-
-                  </ul>
-
-                  <p class="card-text">
-                    Metode praktis untuk menambah perbendaharaan kata Anda setiap hari.
-                  </p>
+                  </div>
 
                 </div>
+              </li>
 
-              </div>
-            </li>
+              <li>
+                <div class="blog-card">
 
-            <li>
-              <div class="blog-card">
+                  <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                    <img src="./assets/images/blog-2.jpg" width="370" height="370" loading="lazy"
+                      alt="Mengapa Belajar Nahwu Penting?" class="img-cover">
+                  </figure>
 
-                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                  <img src="./assets/images/blog-2.jpg" width="370" height="370" loading="lazy"
-                    alt="Mengapa Belajar Nahwu Penting?" class="img-cover">
-                </figure>
+                  <div class="card-content">
 
-                <div class="card-content">
+                    <a href="#" class="card-btn" aria-label="read more">
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
 
-                  <a href="#" class="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
+                    <a href="#" class="card-subtitle">Tata Bahasa</a>
 
-                  <a href="#" class="card-subtitle">Tata Bahasa</a>
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Mengapa Belajar Nahwu Penting?</a>
+                    </h3>
 
-                  <h3 class="h3">
-                    <a href="#" class="card-title">Mengapa Belajar Nahwu Penting?</a>
-                  </h3>
+                    <ul class="card-meta-list">
 
-                  <ul class="card-meta-list">
+                      <li class="card-meta-item">
+                        <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
 
-                    <li class="card-meta-item">
-                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">Oct 05, 2025</span>
+                      </li>
 
-                      <span class="span">Oct 05, 2025</span>
-                    </li>
+                      <li class="card-meta-item">
+                        <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
 
-                    <li class="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+                        <span class="span">Komen 12</span>
+                      </li>
 
-                      <span class="span">Komen 12</span>
-                    </li>
+                    </ul>
 
-                  </ul>
+                    <p class="card-text">
+                      Pahami peran penting Nahwu dalam memahami Al-Qur'an dan teks Arab.
+                    </p>
 
-                  <p class="card-text">
-                    Pahami peran penting Nahwu dalam memahami Al-Qur'an dan teks Arab.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="blog-card">
-
-                <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
-                  <img src="./assets/images/blog-3.jpg" width="370" height="370" loading="lazy"
-                    alt="5 Kesalahan Umum Pemula Saat Belajar Bahasa Arab" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <a href="#" class="card-btn" aria-label="read more">
-                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-                  </a>
-
-                  <a href="#" class="card-subtitle">Motivasi</a>
-
-                  <h3 class="h3">
-                    <a href="#" class="card-title">5 Kesalahan Umum Pemula Saat Belajar Bahasa Arab</a>
-                  </h3>
-
-                  <ul class="card-meta-list">
-
-                    <li class="card-meta-item">
-                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">Sep 28, 2025</span>
-                    </li>
-
-                    <li class="card-meta-item">
-                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">Komen 05</span>
-                    </li>
-
-                  </ul>
-
-                  <p class="card-text">
-                    Hindari kesalahan ini agar proses belajar Anda lebih lancar dan efektif.
-                  </p>
+                  </div>
 
                 </div>
+              </li>
 
-              </div>
-            </li>
+              <li>
+                <div class="blog-card">
 
-          </ul>
+                  <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                    <img src="./assets/images/blog-3.jpg" width="370" height="370" loading="lazy"
+                      alt="5 Kesalahan Umum Pemula Saat Belajar Bahasa Arab" class="img-cover">
+                  </figure>
 
-          <img src="./assets/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
-            class="shape blog-shape">
+                  <div class="card-content">
 
-        </div>
-      </section>
+                    <a href="#" class="card-btn" aria-label="read more">
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+
+                    <a href="#" class="card-subtitle">Motivasi</a>
+
+                    <h3 class="h3">
+                      <a href="#" class="card-title">5 Kesalahan Umum Pemula Saat Belajar Bahasa Arab</a>
+                    </h3>
+
+                    <ul class="card-meta-list">
+
+                      <li class="card-meta-item">
+                        <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">Sep 28, 2025</span>
+                      </li>
+
+                      <li class="card-meta-item">
+                        <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+
+                        <span class="span">Komen 05</span>
+                      </li>
+
+                    </ul>
+
+                    <p class="card-text">
+                      Hindari kesalahan ini agar proses belajar Anda lebih lancar dan efektif.
+                    </p>
+
+                  </div>
+
+                </div>
+              </li>
+
+            </ul>
+
+            <img src="./assets/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
+              class="shape blog-shape">
+
+          </div>
+        </section>
 
     </article>
   </main>
@@ -772,7 +798,7 @@
           <div class="wrapper">
             <span class="span">Alamat:</span>
 
-            <address class="address">Jl. Belajar Arab No. 1, Jakarta, Indonesia</address>
+            <address class="address">Jl. Blang Beringin, Cot Mesjid, Kec. Lueng Bata, Kota Banda Aceh, Aceh</address>
           </div>
 
           <div class="wrapper">
@@ -891,9 +917,9 @@
     <div class="footer-bottom">
       <div class="container">
 
-        <p class="copyright">
+        <!-- <p class="copyright">
           Hak Cipta 2025 Milik <a href="#" class="copyright-link">Tasmu</a>. Seluruh hak cipta dilindungi.
-        </p>
+        </p> -->
 
       </div>
     </div>
